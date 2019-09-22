@@ -7,15 +7,34 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageToPunch: UIImageView!
+    
+    var audioPlayer = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     //functions
+    
+    func playSound(soundName:String, audioPlayer: inout AVAudioPlayer) {
+        
+        if let sound = NSDataAsset(name: soundName) {
+            do{
+                try audioPlayer = AVAudioPlayer(data: sound.data)
+                audioPlayer.play()
+            } catch {
+                print("ERROR: file \(soundName) couldn't be played as a sound")
+            }
+        }else{
+            print("ERROR: file \(soundName) didn't load ")
+        }
+    }
+    
     func  animateImage () {
      let bounds = self.imageToPunch.bounds
      let shrinkValue: CGFloat = 60
@@ -35,6 +54,7 @@ class ViewController: UIViewController {
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
         print("Hey! You Just Pressed the Image!")
         animateImage()
+        playSound(soundName: "Punch", audioPlayer: &audioPlayer)
     }
 }
 

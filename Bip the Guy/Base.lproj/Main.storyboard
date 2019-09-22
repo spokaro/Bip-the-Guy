@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="220px-Roberto_Clemente_1965" translatesAutoresizingMaskIntoConstraints="NO" id="odH-cO-v31">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floyd-mayweather1" translatesAutoresizingMaskIntoConstraints="NO" id="odH-cO-v31">
                                 <rect key="frame" x="16" y="20" width="343" height="449"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -81,6 +81,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="220px-Roberto_Clemente_1965" width="220" height="260"/>
+        <image name="floyd-mayweather1" width="1800" height="2197"/>
     </resources>
 </document>
